@@ -77,7 +77,7 @@ author:
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
     - label: "Google Scholar"
-      icon: "fab fa-brands fa-google-scholar"
+      icon: "fas fa-graduation-cap"  # 使用通用的毕业帽图标
       url: "https://scholar.google.com/citations?user=I7WeIdgAAAAJ&hl=zh-CN"
 footer:
   links:
@@ -91,7 +91,7 @@ footer:
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
     - label: "Google Scholar"
-      icon: "fab fa-brands fa-google-scholar"
+      icon: "fas fa-graduation-cap"  # 使用通用的毕业帽图标
       url: "https://scholar.google.com/citations?user=I7WeIdgAAAAJ&hl=zh-CN"
 defaults:
   # _posts
