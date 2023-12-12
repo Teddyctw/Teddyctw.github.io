@@ -76,8 +76,8 @@ author:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-google-scholar"
+    - label: "Google Scholar"
+      icon: "fab fa-brands fa-google-scholar"
       url: "https://scholar.google.com/citations?user=I7WeIdgAAAAJ&hl=zh-CN"
 footer:
   links:
@@ -90,8 +90,8 @@ footer:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-google-scholar"
+    - label: "Google Scholar"
+      icon: "fab fa-brands fa-google-scholar"
       url: "https://scholar.google.com/citations?user=I7WeIdgAAAAJ&hl=zh-CN"
 defaults:
   # _posts
