@@ -62,7 +62,7 @@ plugins:
 author:
   name   : "Tingwei"
   avatar : "/assets/images/profile小.jpg"
-  bio    : "PhD student in University Technolo of Sydney."
+  bio    : "PhD student in University Technology of Sydney."
   links:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
