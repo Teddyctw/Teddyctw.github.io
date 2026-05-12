@@ -1,28 +1,119 @@
 ---
-# 修改后的 index.html 文件
 layout: home
 author_profile: true
 permalink: /
+classes:
+  - wide
 ---
-<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<div class="about-content">
-  <h1>About Me</h1>
-  
-  <p>I am a Ph.D. student at the University of Technology Sydney (UTS), supervised by Prof. Min Xu. Prior to joining UTS, I earned my Master degree in Communications Engineering from The Chinese University of Hong Kong, Shenzhen and my B.Eng. in Electronic Information Science and Technology from Sun Yat-sen University.</p>
+<section class="home-hero">
+  <div class="home-hero__copy">
+    <p class="section-eyebrow">PhD Student at UTS</p>
+    <h1>Tingwei Chen</h1>
+    <p class="home-hero__lead">
+      I study how AI can understand the physical world through wireless signals,
+      with current work spanning mmWave sensing, Wi-Fi sensing, and LLM-enabled applications.
+    </p>
 
-  <p>My research focuses on mmWave sensing, Wi-Fi sensing, and Large Language Model applications.</p>
-</div>
+    <div class="hero-actions">
+      <a class="btn btn--primary" href="{{ '/about/' | relative_url }}">About Me</a>
+      <a class="btn btn--light-outline" href="https://scholar.google.com/citations?user=I7WeIdgAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a class="btn btn--light-outline" href="https://github.com/Teddyctw/" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
 
-<style>
-  .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
-  }
-  .about-content h1 {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-  }
-</style>
+    <ul class="hero-tags">
+      <li>mmWave Sensing</li>
+      <li>Wi-Fi Sensing</li>
+      <li>Large Language Models</li>
+      <li>Wireless Perception</li>
+    </ul>
+  </div>
+
+  <div class="home-hero__portrait">
+    <img src="{{ '/assets/images/profile小.jpg' | relative_url }}" alt="Portrait of Tingwei Chen">
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="section-heading">
+    <p class="section-eyebrow">Research Themes</p>
+    <h2>Building sensing systems that bridge signals and intelligence</h2>
+  </div>
+
+  <div class="card-grid card-grid--three">
+    <article class="feature-card">
+      <span class="feature-card__index">01</span>
+      <h3>mmWave sensing</h3>
+      <p>
+        Designing models that capture fine-grained motion and spatial structure from high-frequency wireless signals.
+      </p>
+    </article>
+
+    <article class="feature-card">
+      <span class="feature-card__index">02</span>
+      <h3>Wi-Fi sensing</h3>
+      <p>
+        Exploring robust, practical perception pipelines that work with commodity wireless infrastructure in real environments.
+      </p>
+    </article>
+
+    <article class="feature-card">
+      <span class="feature-card__index">03</span>
+      <h3>LLMs for sensing</h3>
+      <p>
+        Connecting foundation models with wireless data so systems can reason, explain, and interact more naturally.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="home-section home-section--split">
+  <div class="section-heading">
+    <p class="section-eyebrow">Path</p>
+    <h2>A research journey across sensing, communication, and AI</h2>
+  </div>
+
+  <div class="card-grid card-grid--timeline">
+    <article class="feature-card feature-card--timeline">
+      <p class="feature-card__meta">Now</p>
+      <h3>University of Technology Sydney</h3>
+      <p>PhD student working with Prof. Min Xu on AI for wireless sensing.</p>
+    </article>
+
+    <article class="feature-card feature-card--timeline">
+      <p class="feature-card__meta">2023 - 2025</p>
+      <h3>Shenzhen Research Institute of Big Data</h3>
+      <p>Visiting Student focusing on Wi-Fi sensing and real-world wireless intelligence.</p>
+    </article>
+
+    <article class="feature-card feature-card--timeline">
+      <p class="feature-card__meta">2021 - 2023</p>
+      <h3>CUHK-Shenzhen</h3>
+      <p>Master's degree in Communications Engineering with a foundation in modern wireless systems.</p>
+    </article>
+
+    <article class="feature-card feature-card--timeline">
+      <p class="feature-card__meta">Industry</p>
+      <h3>Huawei 2012 Labs</h3>
+      <p>Research Intern contributing to Wi-Fi 8 protocol pre-research and forward-looking wireless design.</p>
+    </article>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="contact-panel">
+    <div>
+      <p class="section-eyebrow">Contact</p>
+      <h2>Open to collaboration and thoughtful conversations</h2>
+      <p>
+        If you are interested in wireless sensing, multimodal intelligence, or research collaboration,
+        feel free to reach out.
+      </p>
+    </div>
+
+    <div class="contact-panel__details">
+      <p><strong>Email</strong><br>Tingwei[dot]Chen[at]student[dot]uts[dot]edu[dot]au</p>
+      <p><strong>Focus</strong><br>AI for wireless perception and real-world sensing</p>
+    </div>
+  </div>
+</section>
