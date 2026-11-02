@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><clipPath id="ocean"><rect width="64" height="64" rx="14"/></clipPath></defs>
+  <g clip-path="url(#ocean)">
+    <path fill="#185c8a" d="M0 0h64v64H0z"/>
+    <circle cx="45" cy="18" r="6" fill="#ffd48a"/>
+    <path fill="#58d2dc" d="M0 35C12 25 22 25 34 35S53 45 64 34V64H0z"/>
+    <path fill="#07959e" d="M0 48C12 38 24 38 36 48S55 57 64 46V64H0z"/>
+  </g>
+</svg>
