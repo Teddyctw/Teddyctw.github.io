@@ -20,6 +20,6 @@ title: About
     Institute of Big Data (2023–2025). I also worked as a Research Intern at Huawei 2012 Labs,
     contributing to Wi-Fi 8 protocol pre-research.</p>
   <p>Outside of research, I enjoy playing basketball and volleyball.</p>
-  <p><a href="mailto:Tingwei.Chen@student.uts.edu.au">Tingwei.Chen@student.uts.edu.au</a></p>
+  <p>{% include contact-email.html %}</p>
   <p><a href="{{ '/' | relative_url }}">← Back to homepage</a></p>
 </article>

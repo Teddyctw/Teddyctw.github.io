@@ -10,11 +10,16 @@ Published at https://teddyctw.github.io using GitHub Pages and Jekyll.
 - `assets/css/academic.css`: typography, spacing, colors, and responsive layout.
 - `_pages/about.md`: the existing `/about/` page, retained for older links.
 - `_config.yml`: site name, description, and canonical URL.
-- `assets/images/profile小.jpg`: profile photo.
+- `assets/images/profile-seaside.jpg`: profile photo.
+- `_includes/contact-email.html` and `assets/js/contact.js`: obfuscated email display
+  and email links, assembled only when activated.
 
 The homepage and About page use the standalone `academic` layout. Older archive
 and error pages retain their existing theme. The new layout uses system fonts
-and does not require JavaScript, external fonts, or an icon library.
+and does not require external fonts or an icon library. The page remains readable
+without JavaScript; clickable email links use a small local script, with a human-readable
+obfuscated address as the fallback. This discourages basic scrapers but cannot prevent
+all automated collection.
 
 ## Local preview
 

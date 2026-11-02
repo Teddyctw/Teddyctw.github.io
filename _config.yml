@@ -65,7 +65,7 @@ plugins:
 
 author:
   name   : "Tingwei Chen"
-  avatar : "/assets/images/profile小.jpg"
+  avatar : "/assets/images/profile-seaside.jpg"
   bio    : "PhD student at UTS exploring mmWave radar, human sensing, and embodied perception."
   links:
     # - label: "Website"
