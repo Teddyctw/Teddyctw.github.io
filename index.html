@@ -1,119 +1,110 @@
 ---
-layout: home
-author_profile: true
+layout: academic
 permalink: /
-classes:
-  - wide
 ---
 
-<section class="home-hero">
-  <div class="home-hero__copy">
-    <p class="section-eyebrow">PhD Student at UTS</p>
-    <h1>Tingwei Chen</h1>
-    <p class="home-hero__lead">
-      I study how AI can understand the physical world through wireless signals,
-      with current work spanning mmWave sensing, Wi-Fi sensing, and LLM-enabled applications.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn btn--primary" href="{{ '/about/' | relative_url }}">About Me</a>
-      <a class="btn btn--light-outline" href="https://scholar.google.com/citations?user=I7WeIdgAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      <a class="btn btn--light-outline" href="https://github.com/Teddyctw/" target="_blank" rel="noopener noreferrer">GitHub</a>
+<section id="about" class="intro" aria-labelledby="name">
+  <div class="intro-copy">
+    <p class="eyebrow">AI &amp; WIRELESS SENSING</p>
+    <h1 id="name">Tingwei Chen</h1>
+    <p class="affiliation">PhD Student · University of Technology Sydney</p>
+    <p class="bio">I work at the intersection of <strong>artificial intelligence</strong> and
+      <strong>wireless perception</strong>, exploring how machines can understand the physical
+      world through wireless signals.</p>
+    <p class="bio">At UTS, I am supervised by Prof. Min Xu. My research spans mmWave sensing,
+      Wi-Fi sensing, and applications of large language models in sensing systems.</p>
+    <div class="profile-links" aria-label="Academic profiles">
+      <a href="mailto:Tingwei.Chen@student.uts.edu.au">Email <span aria-hidden="true">↗</span></a>
+      <a href="https://scholar.google.com/citations?user=I7WeIdgAAAAJ&amp;hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/Teddyctw">GitHub <span aria-hidden="true">↗</span></a>
     </div>
-
-    <ul class="hero-tags">
-      <li>mmWave Sensing</li>
-      <li>Wi-Fi Sensing</li>
-      <li>Large Language Models</li>
-      <li>Wireless Perception</li>
-    </ul>
   </div>
+  <figure class="portrait">
+    <img src="{{ '/assets/images/profile小.jpg' | relative_url }}" alt="Tingwei Chen" width="200" height="250" fetchpriority="high">
+    <figcaption>Sydney, Australia</figcaption>
+  </figure>
+</section>
 
-  <div class="home-hero__portrait">
-    <img src="{{ '/assets/images/profile小.jpg' | relative_url }}" alt="Portrait of Tingwei Chen">
+<section id="research" class="section-row" aria-labelledby="research-title">
+  <div class="section-label"><span class="section-number" aria-hidden="true">01 /</span><h2 id="research-title">Research</h2></div>
+  <div class="section-body">
+    <p class="section-intro">From wireless signals to real-world understanding.</p>
+    <div class="research-item">
+      <h3>Wireless perception</h3>
+      <p>Learning fine-grained motion and spatial information from mmWave signals, and building
+        practical Wi-Fi sensing systems for dynamic environments.</p>
+      <p class="keywords">mmWave sensing <span aria-hidden="true">/</span> Wi-Fi sensing <span aria-hidden="true">/</span> Signal understanding</p>
+    </div>
+    <div class="research-item">
+      <h3>AI for sensing systems</h3>
+      <p>Connecting wireless data with machine learning and large language models to support
+        perception, reasoning, and interaction with the physical world.</p>
+      <p class="keywords">Machine learning <span aria-hidden="true">/</span> Large language models <span aria-hidden="true">/</span> Multimodal intelligence</p>
+    </div>
+    <div class="research-item">
+      <h3>Multimodal AI &amp; agents</h3>
+      <p>Exploring visual understanding and how to match real-world tasks with capable AI agents.</p>
+      <p class="keywords">Vision-language models <span aria-hidden="true">/</span> Agent recommendation</p>
+    </div>
   </div>
 </section>
 
-<section class="home-section">
-  <div class="section-heading">
-    <p class="section-eyebrow">Research Themes</p>
-    <h2>Building sensing systems that bridge signals and intelligence</h2>
-  </div>
-
-  <div class="card-grid card-grid--three">
-    <article class="feature-card">
-      <span class="feature-card__index">01</span>
-      <h3>mmWave sensing</h3>
-      <p>
-        Designing models that capture fine-grained motion and spatial structure from high-frequency wireless signals.
-      </p>
+<section id="publications" class="section-row" aria-labelledby="publications-title">
+  <div class="section-label"><span class="section-number" aria-hidden="true">02 /</span><h2 id="publications-title">Selected<br class="desktop-break"> publications</h2></div>
+  <div class="section-body">
+    <article class="paper">
+      <p class="paper-venue">ICML 2026</p>
+      <h3><a href="https://proceedings.mlr.press/v306/shi26ac.html">AgentSelect: Benchmark for Narrative Query-to-Agent Recommendation</a></h3>
+      <p class="paper-authors">Yunxiao Shi, Wujiang Xu, <strong>Tingwei Chen</strong>, Haoning Shang, Ling Yang, Yunfeng Wan, Zhuo Cao, Xing Zi, Dimitris N. Metaxas, Min Xu</p>
+      <div class="paper-links"><a href="https://proceedings.mlr.press/v306/shi26ac.html">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/Ancientshi/AgentSelect">Code <span aria-hidden="true">↗</span></a></div>
     </article>
-
-    <article class="feature-card">
-      <span class="feature-card__index">02</span>
-      <h3>Wi-Fi sensing</h3>
-      <p>
-        Exploring robust, practical perception pipelines that work with commodity wireless infrastructure in real environments.
-      </p>
+    <article class="paper">
+      <p class="paper-venue">NeurIPS 2025</p>
+      <h3><a href="https://arxiv.org/abs/2506.05302">Perceive Anything: Recognize, Explain, Caption, and Segment Anything in Images and Videos</a></h3>
+      <p class="paper-authors">Weifeng Lin, Xinyu Wei, Ruichuan An, Tianhe Ren, <strong>Tingwei Chen</strong>, Renrui Zhang, Ziyu Guo, Wentao Zhang, Lei Zhang, Hongsheng Li</p>
+      <div class="paper-links"><a href="https://arxiv.org/abs/2506.05302">Paper <span aria-hidden="true">↗</span></a><a href="https://perceive-anything.github.io/">Project <span aria-hidden="true">↗</span></a></div>
     </article>
-
-    <article class="feature-card">
-      <span class="feature-card__index">03</span>
-      <h3>LLMs for sensing</h3>
-      <p>
-        Connecting foundation models with wireless data so systems can reason, explain, and interact more naturally.
-      </p>
+    <article class="paper">
+      <p class="paper-venue">Journal of Information and Intelligence · 2024</p>
+      <h3><a href="https://doi.org/10.1016/j.jiixd.2024.04.001">Deep learning-based fall detection using commodity Wi-Fi</a></h3>
+      <p class="paper-authors"><strong>Tingwei Chen</strong>, Xiaoyang Li, Hang Li, Guangxu Zhu</p>
+      <div class="paper-links"><a href="https://doi.org/10.1016/j.jiixd.2024.04.001">Paper <span aria-hidden="true">↗</span></a></div>
     </article>
+    <a class="all-publications" href="https://scholar.google.com/citations?user=I7WeIdgAAAAJ&amp;hl=en">All publications on Google Scholar <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
-<section class="home-section home-section--split">
-  <div class="section-heading">
-    <p class="section-eyebrow">Path</p>
-    <h2>A research journey across sensing, communication, and AI</h2>
-  </div>
-
-  <div class="card-grid card-grid--timeline">
-    <article class="feature-card feature-card--timeline">
-      <p class="feature-card__meta">Now</p>
-      <h3>University of Technology Sydney</h3>
-      <p>PhD student working with Prof. Min Xu on AI for wireless sensing.</p>
-    </article>
-
-    <article class="feature-card feature-card--timeline">
-      <p class="feature-card__meta">2023 - 2025</p>
-      <h3>Shenzhen Research Institute of Big Data</h3>
-      <p>Visiting Student focusing on Wi-Fi sensing and real-world wireless intelligence.</p>
-    </article>
-
-    <article class="feature-card feature-card--timeline">
-      <p class="feature-card__meta">2021 - 2023</p>
-      <h3>CUHK-Shenzhen</h3>
-      <p>Master's degree in Communications Engineering with a foundation in modern wireless systems.</p>
-    </article>
-
-    <article class="feature-card feature-card--timeline">
-      <p class="feature-card__meta">Industry</p>
-      <h3>Huawei 2012 Labs</h3>
-      <p>Research Intern contributing to Wi-Fi 8 protocol pre-research and forward-looking wireless design.</p>
-    </article>
+<section id="experience" class="section-row" aria-labelledby="experience-title">
+  <div class="section-label"><span class="section-number" aria-hidden="true">03 /</span><h2 id="experience-title">Experience</h2></div>
+  <div class="section-body">
+    <div class="experience-item">
+      <div class="experience-top"><h3>University of Technology Sydney</h3><span class="date">2025–Present</span></div>
+      <p class="role">PhD Student</p>
+      <p>AI for wireless sensing · Supervisor: Prof. Min Xu</p>
+    </div>
+    <div class="experience-item">
+      <div class="experience-top"><h3>Shenzhen Research Institute of Big Data</h3><span class="date">2023–2025</span></div>
+      <p class="role">Visiting Student</p>
+      <p>Wi-Fi sensing and wireless intelligence</p>
+    </div>
+    <div class="experience-item">
+      <div class="experience-top"><h3>The Chinese University of Hong Kong, Shenzhen</h3><span class="date">2021–2023</span></div>
+      <p class="role">Master’s Degree · Communications Engineering</p>
+    </div>
+    <div class="experience-item">
+      <div class="experience-top"><h3>Huawei 2012 Labs</h3><span class="date">Dec 2022–Oct 2023</span></div>
+      <p class="role">Research Intern</p>
+      <p>Wi-Fi 8 protocol pre-research</p>
+    </div>
   </div>
 </section>
 
-<section class="home-section">
-  <div class="contact-panel">
-    <div>
-      <p class="section-eyebrow">Contact</p>
-      <h2>Open to collaboration and thoughtful conversations</h2>
-      <p>
-        If you are interested in wireless sensing, multimodal intelligence, or research collaboration,
-        feel free to reach out.
-      </p>
-    </div>
-
-    <div class="contact-panel__details">
-      <p><strong>Email</strong><br>Tingwei[dot]Chen[at]student[dot]uts[dot]edu[dot]au</p>
-      <p><strong>Focus</strong><br>AI for wireless perception and real-world sensing</p>
-    </div>
+<section id="contact" class="section-row contact-section" aria-labelledby="contact-title">
+  <div class="section-label"><span class="section-number" aria-hidden="true">04 /</span><h2 id="contact-title">Contact</h2></div>
+  <div class="section-body">
+    <h3 class="contact-title">Let’s connect.</h3>
+    <p>I’m happy to discuss wireless sensing, AI, and research collaborations.</p>
+    <a class="email-link" href="mailto:Tingwei.Chen@student.uts.edu.au">Tingwei.Chen@student.uts.edu.au <span aria-hidden="true">↗</span></a>
+    <p class="personal-note">Beyond research, you’ll find me playing basketball or volleyball.</p>
   </div>
 </section>

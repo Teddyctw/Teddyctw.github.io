@@ -1,27 +1,41 @@
-# Minimal Mistakes remote theme starter
+# Tingwei Chen · Academic homepage
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+A minimal, responsive academic homepage for AI and wireless sensing research.
+Published at https://teddyctw.github.io using GitHub Pages and Jekyll.
 
-Contains basic configuration to get you a site with:
+## Update content
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+- `index.html`: biography, research interests, selected publications, experience, contact.
+- `_layouts/academic.html`: navigation, metadata, and footer.
+- `assets/css/academic.css`: typography, spacing, colors, and responsive layout.
+- `_pages/about.md`: the existing `/about/` page, retained for older links.
+- `_config.yml`: site name, description, and canonical URL.
+- `assets/images/profile小.jpg`: profile photo.
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+The homepage and About page use the standalone `academic` layout. Older archive
+and error pages retain their existing theme. The new layout uses system fonts
+and does not require JavaScript, external fonts, or an icon library.
 
----
+## Local preview
 
-## Troubleshooting
+With Ruby and Bundler installed:
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+```sh
+bundle install
+bundle exec jekyll serve
+```
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+For Ruby 4, use the included compatibility shim:
+
+```sh
+RUBYOPT=-r./scripts/jekyll-ruby4-compat.rb bundle exec jekyll serve
+```
+
+Open the local URL printed by Jekyll. Changes pushed to `master` are built and
+published automatically by the existing GitHub Pages configuration.
+
+## Content sources
+
+Professional history and selected publications were checked against the linked
+Chinese and English CV repositories. Publication links point to original papers
+or proceedings; author names and venue details remain editable in `index.html`.

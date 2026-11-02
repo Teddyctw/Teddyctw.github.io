@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tingwei Chen
+url: "https://teddyctw.github.io"
+baseurl: ""
 email:
 description: >-
   PhD student at UTS exploring mmWave sensing, Wi-Fi sensing, and AI systems
