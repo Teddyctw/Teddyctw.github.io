@@ -18,10 +18,10 @@ url: "https://teddyctw.github.io"
 baseurl: ""
 email:
 description: >-
-  PhD student at UTS exploring mmWave sensing, Wi-Fi sensing, and AI systems
-  for wireless perception.
+  PhD student at UTS interested in AI-powered mmWave radar for environment
+  perception, human sensing, and embodied perception.
 locale: en-US
-subtitle: Wireless Sensing & AI
+subtitle: Radar Perception & Embodied AI
 twitter_username:
 github_username: Teddyctw
 minimal_mistakes_skin: air
@@ -66,7 +66,7 @@ plugins:
 author:
   name   : "Tingwei Chen"
   avatar : "/assets/images/profile小.jpg"
-  bio    : "PhD student at UTS building AI systems for wireless sensing."
+  bio    : "PhD student at UTS exploring mmWave radar, human sensing, and embodied perception."
   links:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
