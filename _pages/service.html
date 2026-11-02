@@ -1,0 +1,28 @@
+---
+layout: academic-page
+permalink: /service/
+title: Academic service
+nav: service
+description: Workshop organization and journal, conference, and workshop reviewing by Tingwei Chen.
+---
+
+<section class="service-group" aria-labelledby="organization-title">
+  <h2 id="organization-title">Workshop organization</h2>
+  {% for item in site.data.academic_service.organization %}
+  <article class="organization-item">
+    <p class="service-role">{{ item.role }}</p>
+    <h3>{{ item.name }}</h3>
+    <a class="announcement-link" href="{{ item.url }}">Workshop announcement</a>
+  </article>
+  {% endfor %}
+</section>
+{% for group in site.data.academic_service.reviewing %}
+<section class="service-group" aria-labelledby="reviewing-{{ forloop.index }}">
+  <h2 id="reviewing-{{ forloop.index }}">{{ group.title }}</h2>
+  <ul class="service-list">
+    {% for item in group.items %}
+    <li><span>{{ item.name }}</span>{% if item.years %}<span class="date">{{ item.years }}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}

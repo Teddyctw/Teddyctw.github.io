@@ -1,0 +1,35 @@
+organization:
+  - name: Sensing, Prediction, and Decision Management
+    role: Workshop Chair
+    url: "https://mp.weixin.qq.com/s/v8UrpG8G_4H8yeYHBvPPWA?scene=1"
+reviewing:
+  - title: Journal reviewing
+    items:
+      - name: IEEE Transactions on Mobile Computing
+      - name: IEEE Communications Magazine
+      - name: Arabian Journal for Science and Engineering
+  - title: Conference reviewing
+    items:
+      - name: IEEE International Conference on Robotics and Automation (ICRA)
+      - name: IEEE ICASSP
+        years: "2024"
+      - name: IEEE WCNC
+        years: "2024"
+      - name: WCSP
+        years: "2023"
+      - name: IET International Radar Conference
+        years: "2025"
+  - title: Workshop reviewing
+    items:
+      - name: IEEE GLOBECOM 6G Workshop
+        years: "2023"
+      - name: IEEE VTC-Fall Workshop on Integrated Sensing, Communication, and Computation towards 6G
+        years: "2023"
+      - name: IEEE ICC workshops
+        years: "2024"
+      - name: IEEE INFOCOM DeepWireless Workshop
+        years: "2025"
+      - name: IEEE PIMRC workshops
+        years: "2024, 2025"
+      - name: IEEE WCNC workshops
+        years: "2025"

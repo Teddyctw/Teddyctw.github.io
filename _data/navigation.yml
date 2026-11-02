@@ -1,7 +1,16 @@
 main:
-  - title: "About"
-    url: /about/
-  - title: "Scholar"
-    url: https://scholar.google.com/citations?user=I7WeIdgAAAAJ&hl=zh-CN
-  - title: "GitHub"
-    url: https://github.com/Teddyctw/
+  - title: Home
+    url: /
+    key: home
+  - title: Research
+    url: /research/
+    key: research
+  - title: Publications
+    url: /publications/
+    key: publications
+  - title: Experience
+    url: /experience/
+    key: experience
+  - title: Service
+    url: /service/
+    key: service
