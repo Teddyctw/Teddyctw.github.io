@@ -49,6 +49,10 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
  .paper + .paper { margin-top: 29px; }
 .paper .paper-venue { margin: 0 0 7px; color: var(--accent); font-size: 10px; font-weight: 600; letter-spacing: .4px; }
 .paper h3 { line-height: 1.6; margin-bottom: 7px; }
+.paper h4 { margin: 0 0 7px; font-size: 15px; font-weight: 600; line-height: 1.6; letter-spacing: -.15px; }
+.under-review { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--rule); }
+.publication-group { margin-bottom: 22px; font-size: 14px; }
+.paper .contribution-note { margin: 0; font-size: 11px; }
 .paper h3 a { color: var(--ink); }
 .paper h3 a:hover { color: var(--accent); }
 .paper .paper-authors { margin: 0 0 8px; font-size: 12px; line-height: 1.8; }

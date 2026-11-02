@@ -19,6 +19,7 @@ title: About
     of Hong Kong, Shenzhen (2021–2023), and was a Visiting Student at the Shenzhen Research
     Institute of Big Data (2023–2025). I also worked as a Research Intern at Huawei 2012 Labs,
     contributing to Wi-Fi 8 protocol pre-research.</p>
+  <p>I serve as a reviewer for the IEEE International Conference on Robotics and Automation (ICRA).</p>
   <p>Outside of research, I enjoy playing basketball and volleyball.</p>
   <p>{% include contact-email.html %}</p>
   <p><a href="{{ '/' | relative_url }}">← Back to homepage</a></p>
