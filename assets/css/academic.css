@@ -48,12 +48,10 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
 .keywords span { padding-inline: 9px; color: #b8c0ca; }
 .paper + .paper { margin-top: 29px; }
 .paper .paper-venue { margin: 0 0 7px; color: var(--accent); font-size: 10px; font-weight: 600; letter-spacing: .4px; }
-.paper h3 { line-height: 1.6; margin-bottom: 7px; }
-.under-review { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--rule); }
-.publication-group { margin-bottom: 22px; font-size: 14px; }
+.paper h2 { font-size: 15px; line-height: 1.6; margin-bottom: 7px; }
 .paper .contribution-note { margin: 0; font-size: 11px; }
-.paper h3 a { color: var(--ink); }
-.paper h3 a:hover { color: var(--accent); }
+.paper h2 a { color: var(--ink); }
+.paper h2 a:hover { color: var(--accent); }
 .paper .paper-authors { margin: 0 0 8px; font-size: 12px; line-height: 1.8; }
 .paper-authors strong { color: var(--ink); }
 .paper-links { display: flex; gap: 18px; font-size: 11px; }
@@ -105,7 +103,6 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
 .subpage { max-width: 850px; margin-inline: auto; padding: 54px 0 64px; }
 .page-heading { margin-bottom: 36px; padding-bottom: 25px; border-bottom: 1px solid var(--rule); }
 .page-heading h1 { max-width: none; font-size: 34px; letter-spacing: -1px; }
-.page-content h2.publication-group { font-size: 17px; }
 .page-content .section-intro { margin-bottom: 32px; }
 .service-group + .service-group { margin-top: 35px; padding-top: 28px; border-top: 1px solid var(--rule); }
 .service-group > h2 { margin-bottom: 18px; font-size: 17px; }
