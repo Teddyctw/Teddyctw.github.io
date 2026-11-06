@@ -6,27 +6,32 @@ nav: publications
 description: Publications and research papers by Tingwei Chen.
 ---
 
-<p class="section-intro">Listed from newest to oldest. Manuscripts are shown with brief details.</p>
+<p class="section-intro">Listed from newest to oldest.</p>
 <div class="publication-list">
-<article class="paper paper-compact" id="maro"><h2>MARO: Bounding Heading Drift in Single-Chip Radar Odometry with Indoor Walls</h2><p class="paper-venue">Manuscript</p></article>
-<article class="paper paper-compact" id="redo"><h2>ReDO: Radar Ego-Velocity Estimation by Learning and Refining Doppler Evidence</h2><p class="paper-venue">Manuscript</p></article>
-<article class="paper paper-compact"><h2>DetouR: Plugging Association Routes into Search Agents for Multi-hop Question Answering</h2>
-    <p class="paper-venue">Under review</p></article>
-<article class="paper paper-compact"><h2>What Does an Agent Need? Bundle-Aware Agent Resource Composition</h2>
-    <p class="paper-venue">Under review</p></article>
-<article class="paper paper-compact"><h2>Single-Radar Bilateral 3D Near-Field Imaging for Mobile Robots</h2>
-    <p class="paper-venue">Under review</p></article>
-<article class="paper paper-illustrated"><a class="paper-figure" href='{{ "/assets/images/publications/agentselect.webp" | relative_url }}' aria-label="View overview figure"><img src='{{ "/assets/images/publications/agentselect.webp" | relative_url }}' alt="AgentSelect benchmark construction and agent recommendation overview" width="1200" height="741" loading="lazy" decoding="async"></a><div class="paper-details"><h2><a href="https://proceedings.mlr.press/v306/shi26ac.html">AgentSelect: Benchmark for Narrative Query-to-Agent Recommendation</a></h2>
-      <p class="paper-authors">Yunxiao Shi, Wujiang Xu, <strong>Tingwei Chen</strong>, Haoning Shang, Ling Yang, Yunfeng Wan, Zhuo Cao, Xing Zi, Dimitris N. Metaxas, Min Xu</p>
-    <p class="paper-venue">ICML 2026</p>
-      <div class="paper-links"><a href="https://proceedings.mlr.press/v306/shi26ac.html">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/Ancientshi/AgentSelect">Code <span aria-hidden="true">↗</span></a></div><p class="paper-summary">A unified benchmark for recommending agent configurations from natural-language task descriptions.</p></div></article>
-<article class="paper paper-illustrated"><a class="paper-figure" href='{{ "/assets/images/publications/perceive-anything.webp" | relative_url }}' aria-label="View overview figure"><img src='{{ "/assets/images/publications/perceive-anything.webp" | relative_url }}' alt="Perceive Anything architecture for segmentation and semantic understanding" width="1600" height="495" loading="lazy" decoding="async"></a><div class="paper-details"><h2><a href="https://arxiv.org/abs/2506.05302">Perceive Anything: Recognize, Explain, Caption, and Segment Anything in Images and Videos</a></h2>
-      <p class="paper-authors">Weifeng Lin, Xinyu Wei, Ruichuan An, Tianhe Ren, <strong>Tingwei Chen</strong>, Renrui Zhang, Ziyu Guo, Wentao Zhang, Lei Zhang, Hongsheng Li</p>
-    <p class="paper-venue">NeurIPS 2025</p>
-      <div class="paper-links"><a href="https://arxiv.org/abs/2506.05302">Paper <span aria-hidden="true">↗</span></a><a href="https://perceive-anything.github.io/">Project <span aria-hidden="true">↗</span></a></div><p class="paper-summary">Region-level recognition, explanation, captioning, and segmentation in images and videos.</p></div></article>
-<article class="paper"><h2><a href="https://doi.org/10.1016/j.jiixd.2024.04.001">Deep learning-based fall detection using commodity Wi-Fi</a></h2>
-      <p class="paper-authors"><strong>Tingwei Chen</strong>, Xiaoyang Li, Hang Li, Guangxu Zhu</p>
-    <p class="paper-venue">Journal of Information and Intelligence · 2024</p>
-      <div class="paper-links"><a href="https://doi.org/10.1016/j.jiixd.2024.04.001">Paper <span aria-hidden="true">↗</span></a></div></article>
+{% assign papers = site.data.publications | sort: 'sort_order' %}
+{% for paper in papers %}{% unless paper.hidden %}
+<article class="paper{% if paper.compact %} paper-compact{% elsif paper.figure %} paper-illustrated{% endif %}" id="{{ paper.id }}">
+  {% if paper.figure %}
+  {% assign figure_url = '/assets/images/publications/' | append: paper.figure | append: '.webp' %}
+  <a class="paper-figure" href="{{ figure_url | relative_url }}" aria-label="View figure for {{ paper.title | escape }}">
+    <img src="{{ figure_url | relative_url }}" alt="Overview figure for {{ paper.title | escape }}" loading="lazy" decoding="async">
+  </a>
+  {% endif %}
+  <div class="paper-details">
+    <h2>{% if paper.paper %}<a href="{{ paper.paper }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h2>
+    {% if paper.authors %}<p class="paper-authors">{{ paper.authors }}</p>{% endif %}
+    <p class="paper-venue">{% if paper.compact %}{{ paper.status }}{% else %}{{ paper.venue }} · {{ paper.year }}{% endif %}</p>
+    {% if paper.note %}<p class="contribution-note">{{ paper.note }}</p>{% endif %}
+    {% if paper.paper or paper.code or paper.project %}
+    <div class="paper-links">
+      {% if paper.paper %}<a href="{{ paper.paper }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if paper.code %}<a href="{{ paper.code }}">Code <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if paper.project %}<a href="{{ paper.project }}">Project <span aria-hidden="true">↗</span></a>{% endif %}
+    </div>
+    {% endif %}
+    {% if paper.summary %}<p class="paper-summary">{{ paper.summary }}</p>{% endif %}
+  </div>
+</article>
+{% endunless %}{% endfor %}
 </div>
-<a class="all-publications" href="https://scholar.google.com/citations?user=I7WeIdgAAAAJ&amp;hl=en">All publications on Google Scholar <span aria-hidden="true">↗</span></a>
+<a class="all-publications" href="https://scholar.google.com/citations?user=I7WeIdgAAAAJ&amp;hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
