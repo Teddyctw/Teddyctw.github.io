@@ -120,3 +120,17 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
   .service-list li { align-items: start; gap: 18px; font-size: 13px; }
   .service-list .date { padding-top: 3px; }
 }
+
+/* Publication figures retain their full aspect ratio; manuscripts stay compact. */
+.publication-list .paper + .paper { margin-top: 25px; padding-top: 25px; border-top: 1px solid var(--rule); }
+.paper-illustrated { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 28px; align-items: start; }
+.paper-figure { display: flex; align-items: center; justify-content: center; min-height: 145px; padding: 8px; border: 1px solid var(--rule); border-radius: 5px; background: #fff; }
+.paper-figure img { display: block; width: 100%; height: auto; }
+.paper .paper-summary { margin: 12px 0 0; font-size: 12px; line-height: 1.75; }
+.paper-compact h2 { margin-bottom: 4px; }
+.paper-compact .paper-authors { margin-bottom: 4px; }
+.paper-compact .paper-venue { color: var(--muted); font-weight: 500; letter-spacing: 0; font-size: 11px; }
+@media (max-width: 580px) {
+  .paper-illustrated { grid-template-columns: 1fr; gap: 17px; }
+  .paper-figure { max-width: 350px; min-height: 0; }
+}
