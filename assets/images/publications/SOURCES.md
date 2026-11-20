@@ -15,4 +15,10 @@ Figures are extracted from the authors' original papers or figure files, without
 - UAV: Figure 1, authors' published PDF, DOI 10.1109/ICCC49849.2020.9238940
 - Linguistic divergence: topic map from authors' SEJ 2024 workshop manuscript. Listed as a workshop presentation, not a journal publication.
 
-Publication records are in `_data/publications.json`, in reverse chronological order. Set `hidden` to `true` to omit an entry from the rendered list. Current submissions intentionally expose only title and status.
+Publication records are in `_data/publications.json`, in reverse chronological order. Set `hidden` to `true` to omit an entry from the rendered list. Unreleased submissions intentionally expose only title and status. The three arXiv preprints added on 2026-11-20 display their already-public authors, figures, and links; submission venues remain omitted.
+
+## Preprints added 2026-11-20
+
+- AgentComposition: Figure 1, https://arxiv.org/abs/2611.22030v1 (p. 4).
+- DetouR: Figure 1, https://arxiv.org/abs/2611.19967v1 (p. 2).
+- Single-Radar / BilatSAR: Figure 1, https://arxiv.org/abs/2611.11296v1 (p. 3). Equal-contribution notes match the public PDFs.

@@ -20,7 +20,7 @@ description: Publications and research papers by Tingwei Chen.
   <div class="paper-details">
     <h2>{% if paper.paper %}<a href="{{ paper.paper }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h2>
     {% if paper.authors %}<p class="paper-authors">{{ paper.authors }}</p>{% endif %}
-    <p class="paper-venue">{% if paper.compact %}{{ paper.status }}{% else %}{{ paper.venue }} · {{ paper.year }}{% endif %}</p>
+    <p class="paper-venue">{% if paper.compact %}{{ paper.status }}{% else %}{{ paper.venue }} · {{ paper.year }}{% if paper.status %} · {{ paper.status }}{% endif %}{% endif %}</p>
     {% if paper.note %}<p class="contribution-note">{{ paper.note }}</p>{% endif %}
     {% if paper.paper or paper.code or paper.project %}
     <div class="paper-links">
