@@ -134,3 +134,48 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
   .paper-illustrated { grid-template-columns: 1fr; gap: 17px; }
   .paper-figure { max-width: 350px; min-height: 0; }
 }
+
+/* Gentle ocean light stays behind the biography; no animation hides content. */
+.intro { position: relative; isolation: isolate; }
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 16px 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 76% 28%, rgba(50, 164, 188, .10), transparent 55%),
+    radial-gradient(ellipse at 26% 76%, rgba(76, 139, 204, .065), transparent 60%);
+  background-size: 135% 135%;
+  background-position: 75% 55%;
+}
+.paper-figure { overflow: hidden; }
+.paper-figure:focus-visible { border-color: #69aebc; }
+@keyframes page-arrival {
+  from { opacity: .35; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ocean-light {
+  from { background-position: 15% 35%; opacity: .45; }
+  to { background-position: 75% 55%; opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  main.wrap { animation: page-arrival 300ms ease-out both; }
+  .intro::before { animation: ocean-light 4.8s ease-out both; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .paper-figure { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+  .paper-figure img { transition: transform 180ms ease; }
+  .paper-figure:hover { transform: translateY(-2px); border-color: #a9cbd3; box-shadow: 0 8px 20px rgba(24, 92, 138, .09); }
+  .paper-figure:hover img { transform: scale(1.025); }
+}
+@media (prefers-reduced-motion: reduce) {
+  main.wrap, .intro::before { animation: none; }
+  .paper-figure, .paper-figure img { transition: none; transform: none; }
+}
+@media print {
+  main.wrap, .intro::before { animation: none; }
+  .intro::before { display: none; }
+  .paper-figure { box-shadow: none; transform: none; }
+}
