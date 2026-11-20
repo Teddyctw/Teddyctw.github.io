@@ -1,0 +1,12 @@
+{% assign wave_path = 'M0 65 C120 10 240 120 360 65 C480 10 600 120 720 65 C840 10 960 120 1080 65 C1200 10 1320 120 1440 65 V160 H0 Z' %}
+<div class="ocean-scene">
+  <button class="ocean-toggle" type="button" aria-pressed="false" hidden>Pause waves</button>
+  <div class="ocean-water" aria-hidden="true">
+    {% for layer in (1..3) %}
+    <svg class="ocean-layer ocean-layer-{{ layer }}" viewBox="0 0 2880 160" preserveAspectRatio="none" focusable="false">
+      <path d="{{ wave_path }}" />
+      <path d="{{ wave_path }}" transform="translate(1440 0)" />
+    </svg>
+    {% endfor %}
+  </div>
+</div>
