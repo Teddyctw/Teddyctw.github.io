@@ -197,3 +197,36 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
   .portrait-frame::after { display: none; }
   .paper-figure { box-shadow: none; transform: none; }
 }
+
+/* Let the floor plan use the site width while keeping the research prose readable. */
+.subpage-wide { max-width: none; }
+.research-overview { margin: 0 0 42px; }
+.research-overview > a { display: block; border-radius: 8px; }
+.research-overview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e7e3dc;
+  border-radius: 8px;
+  background: #faf5eb;
+}
+.research-overview-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 20px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.research-scenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 155px), 1fr));
+  gap: 12px 20px;
+  margin: 16px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--rule);
+}
+.research-scenes dt { color: var(--ink); font-size: 12px; font-weight: 650; }
+.research-scenes dd { margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.research-directions { max-width: 850px; }
