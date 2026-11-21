@@ -135,20 +135,42 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
   .paper-figure { max-width: 350px; min-height: 0; }
 }
 
-/* Gentle ocean light stays behind the biography; no animation hides content. */
-.intro { position: relative; isolation: isolate; }
-.intro::before {
+/* Keep the ocean accent beside the photograph. */
+.portrait-frame {
+  position: relative;
+  isolation: isolate;
+  border-radius: 4px;
+}
+.portrait-frame::before {
   content: "";
   position: absolute;
-  inset: 16px 0;
   z-index: -1;
+  inset: -7px;
+  border: 1px solid #d3e4ea;
+  border-radius: 10px;
+  background: #f0f7fa;
   pointer-events: none;
-  border-radius: 24px;
-  background:
-    radial-gradient(ellipse at 76% 28%, rgba(50, 164, 188, .10), transparent 55%),
-    radial-gradient(ellipse at 26% 76%, rgba(76, 139, 204, .065), transparent 60%);
-  background-size: 135% 135%;
-  background-position: 75% 55%;
+}
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 14% -14px -12px 20%;
+  border-radius: 18px;
+  background: linear-gradient(150deg, #86c6d7, #5d9fc7);
+  filter: blur(13px);
+  opacity: .22;
+  pointer-events: none;
+}
+.portrait figcaption { margin-top: 20px; }
+@keyframes portrait-light {
+  0% { opacity: .22; transform: translate(-5px, -10px); }
+  45% { opacity: .57; }
+  100% { opacity: .22; transform: translate(0, 0); }
+}
+@media (max-width: 580px) {
+  .portrait-frame::before { inset: -4px; border-radius: 7px; }
+  .portrait-frame::after { inset: 12% -6px -6px 12%; filter: blur(6px); }
 }
 .paper-figure { overflow: hidden; }
 .paper-figure:focus-visible { border-color: #69aebc; }
@@ -156,13 +178,9 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
   from { opacity: .35; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes ocean-light {
-  from { background-position: 15% 35%; opacity: .45; }
-  to { background-position: 75% 55%; opacity: 1; }
-}
 @media (prefers-reduced-motion: no-preference) {
-  main.wrap { animation: page-arrival 300ms ease-out both; }
-
+  main.wrap { animation: page-arrival 300ms ease-out; }
+  .portrait-frame::after { animation: portrait-light 2.4s ease-in-out; }
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .paper-figure { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
@@ -171,41 +189,11 @@ h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; letter-spacing: -.15px;
   .paper-figure:hover img { transform: scale(1.025); }
 }
 @media (prefers-reduced-motion: reduce) {
-  main.wrap, .intro::before { animation: none; }
+  main.wrap, .portrait-frame::after { animation: none; }
   .paper-figure, .paper-figure img { transition: none; transform: none; }
 }
 @media print {
-  main.wrap, .intro::before { animation: none; }
-  .intro::before { display: none; }
+  main.wrap, .portrait-frame::after { animation: none; }
+  .portrait-frame::after { display: none; }
   .paper-figure { box-shadow: none; transform: none; }
 }
-
-/* Three tiled wave layers run at different speeds, with a visible pause control. */
-.intro { padding-bottom: 160px; }
-.intro::before { background: radial-gradient(ellipse at 78% 35%, rgba(36, 150, 189, .09), transparent 66%); }
-.ocean-scene { position: absolute; inset: auto 0 0; height: 125px; }
-.ocean-water { position: absolute; inset: 20px 0 0; overflow: hidden; border-radius: 0 0 18px 18px; pointer-events: none; }
-.ocean-layer { position: absolute; left: 0; width: 200%; height: 100%; }
-.ocean-layer-1 { top: -15px; fill: #71c4df; opacity: .35; }
-.ocean-layer-2 { top: 5px; fill: #26b7bf; opacity: .43; }
-.ocean-layer-3 { top: 24px; fill: #267db1; opacity: .58; }
-.ocean-toggle { position: absolute; top: 0; right: 0; z-index: 1; padding: 3px 10px; border: 1px solid #d8e8ed; border-radius: 20px; background: #fff; color: #426879; font: 11px/1.6 var(--font); cursor: pointer; }
-.ocean-toggle:hover { border-color: #7fb7c7; color: #185c8a; }
-.ocean-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-@keyframes ocean-wave-flow { to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: no-preference) {
-  .ocean-layer { animation: ocean-wave-flow linear infinite; }
-  .ocean-layer-1 { animation-duration: 22s; }
-  .ocean-layer-2 { animation-duration: 15s; animation-delay: -6s; }
-  .ocean-layer-3 { animation-duration: 10s; animation-delay: -3s; }
-  .intro[data-waves-paused="true"] .ocean-layer { animation-play-state: paused; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ocean-layer { animation: none; }
-  .ocean-toggle { display: none; }
-}
-@media (max-width: 580px) {
-  .intro { padding-bottom: 135px; }
-  .ocean-scene { height: 105px; }
-}
-@media print { .ocean-scene { display: none; } .intro { padding-bottom: 40px; } }
